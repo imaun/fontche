@@ -305,5 +305,13 @@ TrueType Fonts (*.ttf)|*.ttf|All files (*.*)|*.*";
             var fontItem = (FontItem) listInstall.SelectedItems[0].Tag;
             txtTestFont.Font = fontItem.Font;
         }
+
+        private void btnInstallFonts_Click(object sender, EventArgs e)
+        {
+            foreach (var font in InstallFonts)
+            {
+                
+            }
+        }
     }
 }

@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.desertTheme1 = new Telerik.WinControls.Themes.DesertTheme();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
@@ -45,8 +45,6 @@
             this.office2010BlueTheme1 = new Telerik.WinControls.Themes.Office2010BlueTheme();
             this.telerikMetroTheme1 = new Telerik.WinControls.Themes.TelerikMetroTheme();
             this.radDock1 = new Telerik.WinControls.UI.Docking.RadDock();
-            this.CollectionWindow = new Telerik.WinControls.UI.Docking.ToolWindow();
-            this.toolTabStrip1 = new Telerik.WinControls.UI.Docking.ToolTabStrip();
             this.windowInstallFont = new Telerik.WinControls.UI.Docking.ToolWindow();
             this.radCommandBar1 = new Telerik.WinControls.UI.RadCommandBar();
             this.commandBarRowElement1 = new Telerik.WinControls.UI.CommandBarRowElement();
@@ -55,6 +53,7 @@
             this.btnRemoveFont = new Telerik.WinControls.UI.CommandBarButton();
             this.listInstall = new Telerik.WinControls.UI.RadListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.toolTabStrip1 = new Telerik.WinControls.UI.Docking.ToolTabStrip();
             this.MainContainer = new Telerik.WinControls.UI.Docking.DocumentContainer();
             this.tabFonts = new Telerik.WinControls.UI.Docking.DocumentTabStrip();
             this.MainPanel = new Telerik.WinControls.UI.Docking.DocumentWindow();
@@ -66,9 +65,11 @@
             this.txtTestFont = new Telerik.WinControls.UI.RadTextBox();
             this.ddlTestFonts = new Telerik.WinControls.UI.RadDropDownList();
             this.tabCollections = new Telerik.WinControls.UI.Docking.ToolTabStrip();
+            this.CollectionWindow = new Telerik.WinControls.UI.Docking.ToolWindow();
             this.aquaTheme1 = new Telerik.WinControls.Themes.AquaTheme();
             this.office2013LightTheme1 = new Telerik.WinControls.Themes.Office2013LightTheme();
             this.windows8Theme1 = new Telerik.WinControls.Themes.Windows8Theme();
+            this.btnInstallFonts = new Telerik.WinControls.UI.CommandBarButton();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
@@ -77,11 +78,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDock1)).BeginInit();
             this.radDock1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip1)).BeginInit();
-            this.toolTabStrip1.SuspendLayout();
             this.windowInstallFont.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radCommandBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listInstall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip1)).BeginInit();
+            this.toolTabStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
             this.MainContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabFonts)).BeginInit();
@@ -174,7 +175,7 @@
             // 
             // radDock1
             // 
-            this.radDock1.ActiveWindow = this.windowInstallFont;
+            this.radDock1.ActiveWindow = this.CollectionWindow;
             this.radDock1.CausesValidation = false;
             this.radDock1.Controls.Add(this.toolTabStrip1);
             this.radDock1.Controls.Add(this.MainContainer);
@@ -192,32 +193,6 @@
             this.radDock1.TabIndex = 4;
             this.radDock1.TabStop = false;
             this.radDock1.Text = "radDock1";
-            // 
-            // CollectionWindow
-            // 
-            this.CollectionWindow.Caption = null;
-            this.CollectionWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.CollectionWindow.Location = new System.Drawing.Point(1, 24);
-            this.CollectionWindow.Name = "CollectionWindow";
-            this.CollectionWindow.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
-            this.CollectionWindow.Size = new System.Drawing.Size(198, 124);
-            this.CollectionWindow.Text = "مجموعه ها";
-            // 
-            // toolTabStrip1
-            // 
-            this.toolTabStrip1.CanUpdateChildIndex = true;
-            this.toolTabStrip1.Controls.Add(this.windowInstallFont);
-            this.toolTabStrip1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.toolTabStrip1.Location = new System.Drawing.Point(5, 5);
-            this.toolTabStrip1.Name = "toolTabStrip1";
-            // 
-            // 
-            // 
-            this.toolTabStrip1.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.toolTabStrip1.SelectedIndex = 0;
-            this.toolTabStrip1.Size = new System.Drawing.Size(200, 304);
-            this.toolTabStrip1.TabIndex = 4;
-            this.toolTabStrip1.TabStop = false;
             // 
             // windowInstallFont
             // 
@@ -238,7 +213,7 @@
             this.radCommandBar1.Name = "radCommandBar1";
             this.radCommandBar1.Rows.AddRange(new Telerik.WinControls.UI.CommandBarRowElement[] {
             this.commandBarRowElement1});
-            this.radCommandBar1.Size = new System.Drawing.Size(198, 32);
+            this.radCommandBar1.Size = new System.Drawing.Size(198, 57);
             this.radCommandBar1.TabIndex = 1;
             this.radCommandBar1.Text = "radCommandBar1";
             // 
@@ -253,7 +228,8 @@
             this.commandBarStripElement1.DisplayName = "commandBarStripElement1";
             this.commandBarStripElement1.Items.AddRange(new Telerik.WinControls.UI.RadCommandBarBaseItem[] {
             this.btnAddFont,
-            this.btnRemoveFont});
+            this.btnRemoveFont,
+            this.btnInstallFonts});
             this.commandBarStripElement1.Name = "commandBarStripElement1";
             // 
             // btnAddFont
@@ -298,6 +274,22 @@
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Font_Install.png");
+            // 
+            // toolTabStrip1
+            // 
+            this.toolTabStrip1.CanUpdateChildIndex = true;
+            this.toolTabStrip1.Controls.Add(this.windowInstallFont);
+            this.toolTabStrip1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.toolTabStrip1.Location = new System.Drawing.Point(5, 5);
+            this.toolTabStrip1.Name = "toolTabStrip1";
+            // 
+            // 
+            // 
+            this.toolTabStrip1.RootElement.MinSize = new System.Drawing.Size(0, 0);
+            this.toolTabStrip1.SelectedIndex = 0;
+            this.toolTabStrip1.Size = new System.Drawing.Size(200, 304);
+            this.toolTabStrip1.TabIndex = 4;
+            this.toolTabStrip1.TabStop = false;
             // 
             // MainContainer
             // 
@@ -357,26 +349,26 @@
             this.gridView.MasterTemplate.AllowEditRow = false;
             this.gridView.MasterTemplate.AllowSearchRow = true;
             this.gridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn4.FieldName = "Name";
-            gridViewTextBoxColumn4.HeaderText = "فونت";
-            gridViewTextBoxColumn4.IsPinned = true;
-            gridViewTextBoxColumn4.Name = "column1";
-            gridViewTextBoxColumn4.PinPosition = Telerik.WinControls.UI.PinnedColumnPosition.Left;
-            gridViewTextBoxColumn4.Width = 177;
-            gridViewTextBoxColumn5.FieldName = "EnglishSample";
-            gridViewTextBoxColumn5.HeaderText = "نمونه لاتین";
-            gridViewTextBoxColumn5.Name = "column2";
-            gridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            gridViewTextBoxColumn5.Width = 103;
-            gridViewTextBoxColumn6.FieldName = "PersianSample";
-            gridViewTextBoxColumn6.HeaderText = "نمونه فارسی";
-            gridViewTextBoxColumn6.Name = "column3";
-            gridViewTextBoxColumn6.Width = 103;
+            gridViewTextBoxColumn1.FieldName = "Name";
+            gridViewTextBoxColumn1.HeaderText = "فونت";
+            gridViewTextBoxColumn1.IsPinned = true;
+            gridViewTextBoxColumn1.Name = "column1";
+            gridViewTextBoxColumn1.PinPosition = Telerik.WinControls.UI.PinnedColumnPosition.Left;
+            gridViewTextBoxColumn1.Width = 177;
+            gridViewTextBoxColumn2.FieldName = "EnglishSample";
+            gridViewTextBoxColumn2.HeaderText = "نمونه لاتین";
+            gridViewTextBoxColumn2.Name = "column2";
+            gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            gridViewTextBoxColumn2.Width = 103;
+            gridViewTextBoxColumn3.FieldName = "PersianSample";
+            gridViewTextBoxColumn3.HeaderText = "نمونه فارسی";
+            gridViewTextBoxColumn3.Name = "column3";
+            gridViewTextBoxColumn3.Width = 103;
             this.gridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
-            this.gridView.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3});
+            this.gridView.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.gridView.Name = "gridView";
             this.gridView.Size = new System.Drawing.Size(401, 292);
             this.gridView.TabIndex = 4;
@@ -508,6 +500,31 @@
             this.tabCollections.TabStop = false;
             this.tabCollections.Text = "مجموعه ها";
             // 
+            // CollectionWindow
+            // 
+            this.CollectionWindow.Caption = null;
+            this.CollectionWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.CollectionWindow.Location = new System.Drawing.Point(1, 24);
+            this.CollectionWindow.Name = "CollectionWindow";
+            this.CollectionWindow.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
+            this.CollectionWindow.Size = new System.Drawing.Size(198, 124);
+            this.CollectionWindow.Text = "مجموعه ها";
+            // 
+            // btnInstallFonts
+            // 
+            this.btnInstallFonts.AutoToolTip = true;
+            this.btnInstallFonts.DisplayName = "نصب فونت ها";
+            this.btnInstallFonts.DrawBackgroundImage = true;
+            this.btnInstallFonts.DrawImage = true;
+            this.btnInstallFonts.DrawText = true;
+            this.btnInstallFonts.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnInstallFonts.Image = ((System.Drawing.Image)(resources.GetObject("btnInstallFonts.Image")));
+            this.btnInstallFonts.Name = "btnInstallFonts";
+            this.btnInstallFonts.Text = "نصب";
+            this.btnInstallFonts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInstallFonts.ToolTipText = "نصب";
+            this.btnInstallFonts.Click += new System.EventHandler(this.btnInstallFonts_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -535,12 +552,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDock1)).EndInit();
             this.radDock1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip1)).EndInit();
-            this.toolTabStrip1.ResumeLayout(false);
             this.windowInstallFont.ResumeLayout(false);
             this.windowInstallFont.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radCommandBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listInstall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip1)).EndInit();
+            this.toolTabStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MainContainer)).EndInit();
             this.MainContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabFonts)).EndInit();
@@ -601,5 +618,6 @@
         private Telerik.WinControls.UI.CommandBarStripElement commandBarStripElement1;
         private Telerik.WinControls.UI.CommandBarButton btnAddFont;
         private Telerik.WinControls.UI.CommandBarButton btnRemoveFont;
+        private Telerik.WinControls.UI.CommandBarButton btnInstallFonts;
     }
 }

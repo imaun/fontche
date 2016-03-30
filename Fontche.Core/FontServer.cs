@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
+using System.Net.Mime;
+using System.Windows.Forms;
 
 namespace Fontche.Core
 {
@@ -119,6 +122,26 @@ namespace Fontche.Core
             var api = new FontApi();
 
             result.Font = api.GetSpecialFont(filePath, 9);
+
+            return result;
+        }
+
+        public bool Install(List<FontItem> items)
+        {
+            var result = false; //Determine if Install process is a success or not
+            var appPath = Application.StartupPath + "\\FontReg.exe";
+            var sourceDir = Application.StartupPath + "\\Install_Temp";
+            var fontRgePath = sourceDir + "\\FontReg.exe";
+            if (!Directory.Exists(sourceDir))
+            {
+                Directory.CreateDirectory(sourceDir);
+            }
+            if (!File.Exists(fontRgePath))
+            {
+                
+            }
+            var _params = @"/Copy ";
+
 
             return result;
         }
