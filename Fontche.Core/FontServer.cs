@@ -4,6 +4,7 @@ using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Net.Mime;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Fontche.Core
@@ -128,10 +129,8 @@ namespace Fontche.Core
 
         public bool Install(List<FontItem> items)
         {
-            var result = false; //Determine if Install process is a success or not
-            var appPath = Application.StartupPath + "\\FontReg.exe";
-            var sourceDir = Application.StartupPath + "\\Install_Temp";
-            var fontRgePath = sourceDir + "\\FontReg.exe";
+            var sourceDir = Application.StartupPath + "\\Installs";
+            var fontRgePath = Application.StartupPath + "\\FontReg.exe";
             if (!Directory.Exists(sourceDir))
             {
                 Directory.CreateDirectory(sourceDir);
@@ -141,9 +140,16 @@ namespace Fontche.Core
                 
             }
             var _params = @"/Copy ";
-
-
-            return result;
+            Directory.SetCurrentDirectory(sourceDir);
+            foreach (var item in items)
+            {
+                var filename = Path.GetFileName(item.FontPath);
+                var newFilePath = sourceDir + "\\" + filename;
+                File.Copy(item.FontPath, newFilePath, true);
+            }
+            var procInfo = new ProcessStartInfo(fontRgePath, _params);
+            Process.Start(procInfo);
+            return true;
         }
 
     }

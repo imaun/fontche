@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Fontchi
+namespace Fontche
 {
     static class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace Fontchi
+﻿namespace Fontche
 {
     partial class RadForm1
     {
@@ -31,8 +31,6 @@
             this.ddlFonts = new Telerik.WinControls.UI.RadDropDownList();
             this.txtFont = new Telerik.WinControls.UI.RadTextBox();
             this.customShape1 = new Telerik.WinControls.OldShapeEditor.CustomShape();
-            this.desertTheme1 = new Telerik.WinControls.Themes.DesertTheme();
-            this.visualStudio2012DarkTheme1 = new Telerik.WinControls.Themes.VisualStudio2012DarkTheme();
             ((System.ComponentModel.ISupportInitialize)(this.ddlFonts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -99,7 +97,5 @@
         private Telerik.WinControls.UI.RadDropDownList ddlFonts;
         private Telerik.WinControls.UI.RadTextBox txtFont;
         private Telerik.WinControls.OldShapeEditor.CustomShape customShape1;
-        private Telerik.WinControls.Themes.DesertTheme desertTheme1;
-        private Telerik.WinControls.Themes.VisualStudio2012DarkTheme visualStudio2012DarkTheme1;
     }
 }

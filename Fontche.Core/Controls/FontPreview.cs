@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Fontchi.Core.Controls
+namespace Fontche.Core.Controls
 {
     public partial class FontPreview : UserControl
     {

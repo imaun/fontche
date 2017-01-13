@@ -1,4 +1,4 @@
-﻿namespace Fontchi.Core.Controls
+﻿namespace Fontche.Core.Controls
 {
     partial class FontPreview
     {

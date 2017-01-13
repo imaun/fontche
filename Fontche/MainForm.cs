@@ -5,9 +5,10 @@ using System.Linq;
 using System.Windows.Forms;
 using Fontche.Core;
 using Telerik.WinControls;
+using Telerik.WinControls.Enumerations;
 using Telerik.WinControls.UI;
 
-namespace Fontchi
+namespace Fontche
 {
     public partial class MainForm : RadForm
     {
@@ -30,11 +31,6 @@ namespace Fontchi
 
         public float UserFontSize { get; set; }
 
-        public string SearchKeyword
-        {
-            get { return txtSearch.Text; }
-            set { txtSearch.Text = value; }
-        }
 
         public int SelectedFontIndex => gridView.SelectedRows.Count == 0 
             ? -1 
@@ -62,7 +58,7 @@ namespace Fontchi
         public MainForm()
         {
             InitializeComponent();
-            AppTheme = "Office2013Light";
+            AppTheme = "VisualStudio2012Dark";
             UserFontSize = 12;
             fontServer = new FontServer(false, UserFontSize);
             fontServer.Load();
@@ -77,8 +73,23 @@ namespace Fontchi
             gridView.EnableAlternatingRowColor = true;
             InstallFonts = new List<FontItem>();
             listInstall.ViewType = ListViewType.IconsView;
+            mnuThemeDark.Click += ThemeDarkOnClick;
+            mnuThemeLight.Click += ThemeLightOnClick;
         }
 
+        private void ThemeDarkOnClick(object sender, EventArgs eventArgs)
+        {
+            AppTheme = "VisualStudio2012Dark";
+            mnuThemeDark.ToggleState = ToggleState.On;
+            mnuThemeLight.ToggleState = ToggleState.Off;
+        }
+
+        private void ThemeLightOnClick(object sender, EventArgs eventArgs)
+        {
+            AppTheme = "Office2013Light";
+            mnuThemeLight.ToggleState= ToggleState.On;
+            mnuThemeDark.ToggleState = ToggleState.Off;
+        }
 
         #region Methods
 
@@ -191,10 +202,6 @@ namespace Fontchi
 
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            SearchFonts(SearchKeyword);
-        }
 
         private void ZoomInFont()
         {
@@ -308,10 +315,38 @@ TrueType Fonts (*.ttf)|*.ttf|All files (*.*)|*.*";
 
         private void btnInstallFonts_Click(object sender, EventArgs e)
         {
-            foreach (var font in InstallFonts)
+            if (!InstallFonts.Any())
             {
-                
+                MessageBox.Show("هیچ فونتی برای نصب انتخاب نشده است.", "نصب فونت",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnAddFont_Click(sender, e);
+                return;
             }
+            Cursor = Cursors.WaitCursor;
+            fontServer.Install(InstallFonts);
+            Cursor = Cursors.Default;
+            fontServer.Load();
+            gridView.DataSource = fontServer.FontItems;
+            SetGridFonts();
+            MessageBox.Show("نصب فونت(ها) با موفقیت انجام شد.", "نصب فونت", 
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            InstallFonts.Clear();
+            listInstall.Items.Clear();
+        }
+
+        private void btnThemeSelect_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnThemeSelect_DefaultItemChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnThemeSelect_ChildrenChanged(object sender, ChildrenChangedEventArgs e)
+        {
+            
         }
     }
 }

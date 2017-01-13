@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
 
-namespace Fontchi
+namespace Fontche
 {
     public partial class RadForm1 : Telerik.WinControls.UI.RadForm
     {

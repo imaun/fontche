@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Fontchi")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Fontche")]
+[assembly: AssemblyDescription("Windows Font manager")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Fontchi")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
+[assembly: AssemblyCompany("Farasun")]
+[assembly: AssemblyProduct("Fontche")]
+[assembly: AssemblyCopyright("Copyright © Farasun 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
